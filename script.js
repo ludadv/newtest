@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-
+//Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. Курс валюты храните в константе.
     // $('button').on('click', function() {
     //     const a = 0.8256;
     //     let b = $('.input1').val();
@@ -9,6 +9,7 @@ $(document).ready(function() {
     //
     // });
 
+//Пользователь указывает объем флешки в Гб. Программа должна посчитать, сколько файлов размером в 820 Мб помещается на флешку
     // $('button').on('click', function() {
     //     let a = 820;
     //     let b = $('.input1').val();
@@ -16,6 +17,7 @@ $(document).ready(function() {
     //     $('.input2').val(c);
     // });
 
+//Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит, сколько шоколадок может купить пользователь, и сколько сдачи у него останется.
     // $('button').on('click', function() {
     //     let cash = $('.input1').val();
     //     let price = $('.input2').val();
@@ -27,6 +29,7 @@ $(document).ready(function() {
     //     }
     // });
 
+//Пользователь вводит сумму вклада в банк на 2 месяца, с процентной ставкой депозита 5% годовых. Вывести сумму начисленных процентов.
     // $('button').on('click', function () {
     //     let deposit = $('.input1').val();
     //     let depositInterest = ((deposit / 12) * 0.05) * 2
@@ -34,6 +37,7 @@ $(document).ready(function() {
     //
     // })
 
+//Запросить у пользователя его возраст и определить, кем он является: ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).
     // let age = prompt("Сколько вам лет", "");
     // if (age >= 0 && age <= 2) {
     //     console.log("ребенок");
@@ -45,18 +49,21 @@ $(document).ready(function() {
     //     console.log("пенсионер");
     // }
 
-    // let number1 = +prompt("Введите первое число", "");
-    // let number2 = +prompt("Введите второе число", "");
-    // let i = number1;
-    // let result = 0;
-    // for (; i < number2; i++) {
-    //     result+=i;
-    // }
-    // console.log(result);
+//Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+//     let number1 = +prompt("Введите первое число", "");
+//     let number2 = +prompt("Введите второе число", "");
+//     let i = number1;
+//     let result = 0;
+//     for (; i < number2; i++) {
+//         result+=i;
+//     }
+//     console.log(result);
 
+//Определить количество цифр в введенном числе.
     // let number = prompt("Введите число", "");
     // console.log(number.length);
 
+//Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
     // let sumPositive = 0;
     // let sumNegative = 0;
     // let sumNull = 0;
@@ -71,7 +78,8 @@ $(document).ready(function() {
     //     }
     // }
     // console.log("положительных" + ":" + sumPositive + " "  + "отрицательных" + ":" + sumNegative + " " + "нулей" + ":" + sumNull);
-    //
+
+//Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше, чем второе; 1 – если первое больше, чем второе; и 0 – если числа равны.
     // function getNumber (number1, number2) {
     //     if (number1 < number2) {
     //         return -1;
@@ -84,6 +92,7 @@ $(document).ready(function() {
     //
     // getNumber(2, 5);
 
+//Вывести объекты id которого соответсвуют значению в массиве
     // let arrayID = [0, 1, 2, 3, 4, 5, 6, 7];
     // let arrayUser = [
     //     {
@@ -121,6 +130,7 @@ $(document).ready(function() {
     //     }
     // })
 
+//Написать функцию, которая вычисляет факториал переданного ей числа.
     // function factorial (number) {
     //     let factorialNumber = 1;
     //     for (let i = 1; i <= number; i++) {
@@ -130,76 +140,125 @@ $(document).ready(function() {
     // }
     //
     // factorial (7);
-    /*----------------------------------------------------------------*/
-    let car1 = {
-        manufacturer: 'Mazda',
-        model: 'Mazda6',
-        year: 2002,
-        speed: 28
-    };
-    let car2 = {
-        manufacturer: 'Volvo',
-        model: 'Volvo5',
-        year: 2006,
-        speed: 30
-    }
-    let car3 = {
-        manufacturer: 'BMW',
-        model: 'BMW3',
-        year: 2013,
-        speed: 36
-    };
 
+// Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), и следующие функции для работы с этим объектом:
+// Функция для вывода на экран информации об автомобиле;
+// Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
+//     let arrayCar = [
+//         {
+//             manufacturer: 'Mazda',
+//             model: 'Mazda6',
+//             year: 2002,
+//             speed: 28
+//         },
+//         {
+//             manufacturer: 'Volvo',
+//             model: 'Volvo5',
+//             year: 2006,
+//             speed: 30
+//         },
+//         {
+//             manufacturer: 'BMW',
+//             model: 'BMW3',
+//             year: 2013,
+//             speed: 36
+//         }
+//     ]
+//     function showInfoCar (carInfo) {
+//         console.log("производитель" + ":" + " " + carInfo.manufacturer + " " +
+//             "модель" + ":" + " " + carInfo.model  + " " +
+//             "год выпуска" + ": " +  carInfo.year + ":"  + " " + "скорость" + ":"  + " "+ carInfo.speed);
+//
+//     }
+//     function showAllCar (carsArray) {
+//         carsArray.forEach(function(carItem) {
+//             showInfoCar(carItem);
+//         });
+//     }
+//     showAllCar (arrayCar);
+//
+//     function timing (distance, speed) {
+//         let time = distance / speed;
+//         if (time > 4) {
+//             let relax = Math.trunc (time / 4);
+//             time = time + relax;
+//             console.log(time.toFixed(2));
+//         } else {
+//             console.log(time);
+//         }
+//     }
+//
+//     timing (85, 20 );
 
-    function showInfoCar (carInfo) {
-        console.log("производитель" + ":" + " " + carInfo.manufacturer + " " +
-            "модель" + ":" + " " + carInfo.model  + " " +
-            "год выпуска" + ": " +  carInfo.year + ":"  + " " + "скорость" + ":"  + " "+ carInfo.speed);
-    }
-    // showInfoCar(car1);
-    // showInfoCar(car2);
-    // showInfoCar(car3);
+// //Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом:
+// // Функция сложения 2-х объектов-дробей;
+// // Функция вычитания 2-х объектов-дробей;
+// // Функция умножения 2-х объектов-дробей;
+// // Функция деления 2-х объектов-дробей;
+// // Функция сокращения объекта-дроби.
+//     let fraction = {
+//         numerator: 5,
+//         denominator: 20
+//     }
+//     console.log(fraction);
 
+//Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом:
+// Функция вывода времени на экран;
+// Функция изменения времени на переданное количество секунд;
+// Функция изменения времени на переданное количество минут;
+// Функция изменения времени на переданное количество часов.
+// Учтите, что в последних 3-х функциях, при изменении одной части времени, может измениться и другая. Например, если ко времени «20:30:45» добавить 30 секунд, то должно получиться «20:31:15», а не «20:30:75».
+ let time = {
+     hour: 20,
+     minute: 30,
+     second: 45
+ }
 
-    let arrayCar = [
-        {
-            manufacturer: 'Mazda',
-            model: 'Mazda6',
-            year: 2002,
-            speed: 28
-        },
-        {
-            manufacturer: 'Volvo',
-            model: 'Volvo5',
-            year: 2006,
-            speed: 30
-        },
-        {
-            manufacturer: 'BMW',
-            model: 'BMW3',
-            year: 2013,
-            speed: 36
-        }
-    ]
-    function showAllCar (carsArray) {
-        carsArray.forEach(function(carItem) {
-            showInfoCar(carItem);
-        });
-    }
-    showAllCar (arrayCar);
-    /*---------------------------------------------------------*/
-    function timing (distance, speed) {
-        let time = distance / speed;
-        if (time > 4) {
-            let relax = Math.trunc (time / 4);
-            time = time + relax;
-            console.log(time.toFixed(2));
+ function displayTime (currentTime) {
+    let hours = currentTime.hour;
+    let minutes = currentTime.minute;
+    let seconds = currentTime.second;
+    console.log(hours + " : " + minutes + " : " + seconds);
+ }
+
+ function chanceTimeSecond (initialTime, chanceSeconds) {
+    let newTimeSeconds = initialTime.second + chanceSeconds;
+     if (newTimeSeconds < 60) {
+         initialTime.second = newTimeSeconds;
+         displayTime(initialTime);
+     } else {
+         let minutes = Math.trunc(newTimeSeconds / 60);
+         initialTime.second = newTimeSeconds - (minutes * 60);
+         initialTime.minute = initialTime.minute + minutes;
+         displayTime(initialTime);
+     }
+ }
+
+    function chanceTimeMinute (initialTime, chanceMinutes) {
+        let newTimeMinutes = initialTime.minute + chanceMinutes;
+        if (newTimeMinutes < 60) {
+            initialTime.minute = newTimeMinutes;
+            displayTime(initialTime);
         } else {
-            console.log(time);
+            let hours = Math.trunc(newTimeMinutes / 60);
+            initialTime.minute = newTimeMinutes - (hours * 60);
+            initialTime.hour = initialTime.hour + hours;
+            displayTime(initialTime);
         }
     }
 
-    timing (85, 20 );
+    function chanceTimeHour (initialTime, chanceHours) {
+        let newTimeHours = initialTime.hour + chanceHours;
+        initialTime.hour = newTimeHours;
+        displayTime(initialTime);
+
+    }
+
+
+    chanceTimeHour(time, 3);
+    chanceTimeMinute(time, 200);
+    chanceTimeSecond(time, 40);
+
 
 
 });
