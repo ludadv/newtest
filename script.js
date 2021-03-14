@@ -208,59 +208,49 @@ $(document).ready(function() {
 // Функция изменения времени на переданное количество минут;
 // Функция изменения времени на переданное количество часов.
 // Учтите, что в последних 3-х функциях, при изменении одной части времени, может измениться и другая. Например, если ко времени «20:30:45» добавить 30 секунд, то должно получиться «20:31:15», а не «20:30:75».
- let time = {
-     hour: 20,
-     minute: 30,
-     second: 45
- }
+//
 
- function displayTime (currentTime) {
-    let hours = currentTime.hour;
-    let minutes = currentTime.minute;
-    let seconds = currentTime.second;
-    console.log(hours + " : " + minutes + " : " + seconds);
- }
+    let users = [
+        {
+            id: 1,
+            name: 'Ivan',
+            age: 20,
+        },
+        {
+            id: 2,
+            name: 'Lena',
+            age: 22,
+        },
+        {
+            id: 3,
+            name: 'Igor',
+            age: 24,
+        },
+        {
+            id: 4,
+            name: 'Vera',
+            age: 28,
+        },
+        {
+            id: 5,
+            name: 'Vlad',
+            age: 29,
+        },
+    ];
 
- function chanceTimeSecond (initialTime, chanceSeconds) {
-    let newTimeSeconds = initialTime.second + chanceSeconds;
-     if (newTimeSeconds < 60) {
-         initialTime.second = newTimeSeconds;
-         displayTime(initialTime);
-     } else {
-         let minutes = Math.trunc(newTimeSeconds / 60);
-         initialTime.second = newTimeSeconds - (minutes * 60);
-         initialTime.minute = initialTime.minute + minutes;
-         displayTime(initialTime);
-     }
- }
-
-    function chanceTimeMinute (initialTime, chanceMinutes) {
-        let newTimeMinutes = initialTime.minute + chanceMinutes;
-        if (newTimeMinutes < 60) {
-            initialTime.minute = newTimeMinutes;
-            displayTime(initialTime);
-        } else {
-            let hours = Math.trunc(newTimeMinutes / 60);
-            initialTime.minute = newTimeMinutes - (hours * 60);
-            initialTime.hour = initialTime.hour + hours;
-            displayTime(initialTime);
-        }
+    function showUsers (userArray) {
+        let containerTable = $('.container');
+        let deleteElement = '&#9746';
+        userArray.forEach(function(item, i) {
+            let newstring = "<tr>" + "<td>" + userArray[i].id + "</td>" + "<td>" + userArray[i].name + "</td>"
+                + "<td>" + userArray[i].age + "</td>" + "<td>" + deleteElement + "</td>" + "</tr>";
+            containerTable.append(newstring);
+            $('.container td:last-child').on( "click", function() {
+                $(this).parent().remove();
+            });
+        });
     }
-
-    function chanceTimeHour (initialTime, chanceHours) {
-        let newTimeHours = initialTime.hour + chanceHours;
-        initialTime.hour = newTimeHours;
-        displayTime(initialTime);
-
-    }
-
-
-    chanceTimeHour(time, 3);
-    chanceTimeMinute(time, 200);
-    chanceTimeSecond(time, 40);
-
-
-
+    showUsers(users);
 });
 
 
