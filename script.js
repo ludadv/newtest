@@ -210,47 +210,4 @@ $(document).ready(function() {
 // Учтите, что в последних 3-х функциях, при изменении одной части времени, может измениться и другая. Например, если ко времени «20:30:45» добавить 30 секунд, то должно получиться «20:31:15», а не «20:30:75».
 //
 
-    let users = [
-        {
-            id: 1,
-            name: 'Ivan',
-            age: 20,
-        },
-        {
-            id: 2,
-            name: 'Lena',
-            age: 22,
-        },
-        {
-            id: 3,
-            name: 'Igor',
-            age: 24,
-        },
-        {
-            id: 4,
-            name: 'Vera',
-            age: 28,
-        },
-        {
-            id: 5,
-            name: 'Vlad',
-            age: 29,
-        },
-    ];
-
-    function showUsers (userArray) {
-        let containerTable = $('.container');
-        let deleteElement = '&#9746';
-        userArray.forEach(function(item, i) {
-            let newstring = "<tr>" + "<td>" + userArray[i].id + "</td>" + "<td>" + userArray[i].name + "</td>"
-                + "<td>" + userArray[i].age + "</td>" + "<td>" + deleteElement + "</td>" + "</tr>";
-            containerTable.append(newstring);
-            $('.container td:last-child').on( "click", function() {
-                $(this).parent().remove();
-            });
-        });
-    }
-    showUsers(users);
 });
-
-
