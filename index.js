@@ -41,6 +41,11 @@ $(document).ready(function() {
         $(this).parent().remove();
     });
 
+    $('.box').hide();
+    $('.btn-add').on( "click", function() {
+        $('.box').show();
+    });
+
     $('.button').on( "click", function() {
         let input1 = $('.input1').val();
         let input2 = $('.input2').val();
