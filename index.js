@@ -41,9 +41,9 @@ $(document).ready(function() {
         $(this).parent().remove();
     });
 
-    $('.box').hide();
+    $('.js-box').hide();
     $('.btn-add').on( "click", function() {
-        $('.box').show();
+        $('.js-box').show();
     });
 
     $('.button').on( "click", function() {

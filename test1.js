@@ -21,7 +21,7 @@ $(document).ready(function() {
             status: 'buy',
         },
     ];
-    let shoppingBox = $(".shopping-box")
+    let shoppingBox = $(".shopping-box");
     function showList (list) {
         shoppingBox.html("");
         list.forEach(function(item) {
@@ -30,6 +30,33 @@ $(document).ready(function() {
             shoppingBox.append(listbuy);
         });
     };
+
+    $('.btn-add-buy').on( "click", function() {
+        appendBuy(shoppingList);
+        $('.input').val('');
+        showList(shoppingList);
+    });
+    function appendBuy (listBuy) {
+        let name = $('.input-name').val();
+        let quantity = +$('.input-quantity').val();
+        let status = $('.input-status').val();
+        let currentName = listBuy.find( currentValue => currentValue.name == name);
+        if (quantity !== 0 && currentName) {
+            currentName.quantity = currentName.quantity + quantity;
+            return;
+        }
+        if (listBuy.name !== name) {
+            let newBuy = {
+                name: name,
+                quantity: quantity,
+                status: status,
+            };
+            listBuy.push(newBuy);
+        }
+        if (name == "" || quantity == "" || status == "") {
+            return;
+        }
+    }
 
     shoppingList.sort(function(a, b) {
             var x = a.status.toLowerCase();
@@ -40,5 +67,4 @@ $(document).ready(function() {
     });
 
     showList(shoppingList);
-
 });
