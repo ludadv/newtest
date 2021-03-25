@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
     let shoppingList = [
         {
             name: 'cream',
@@ -40,37 +40,30 @@ $(document).ready(function() {
         let name = $('.input-name').val();
         let quantity = +$('.input-quantity').val();
         let status = $('.input-status').val();
+        if (!name || !quantity || !status) {
+            return;
+        }
         let currentName = listBuy.find( currentValue => currentValue.name == name);
         if (quantity !== 0 && currentName) {
             currentName.quantity = currentName.quantity + quantity;
             return;
         }
-        if (listBuy.name !== name) {
-            let newBuy = {
-                name: name,
-                quantity: quantity,
-                status: status,
-            };
-            listBuy.push(newBuy);
-        }
-        if (name == "" || quantity == "" || status == "") {
-            return;
-        }
+        let newBuy = {
+            name: name,
+            quantity: quantity,
+            status: status,
+        };
+        listBuy.push(newBuy);
     }
 
     shoppingList.sort(function(a, b) {
-            var x = a.status.toLowerCase();
-            var y = b.status.toLowerCase();
-            if (x > y) {return -1;}
-            if (x < y) {return 1;}
-            return 0;
+        var x = a.status.toLowerCase();
+        var y = b.status.toLowerCase();
+        if (x > y) {return -1;}
+        if (x < y) {return 1;}
+        return 0;
     });
 
     showList(shoppingList);
-
-
-let buyUser1 = new Card('cream', 2, 'buy');
-let buyUser2 = new Card('shampoo', 6, 'buy');
-let buyUser3 = new Card('pomade', 8, "don't buy");
-
 });
+*/
