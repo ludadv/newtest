@@ -45,6 +45,19 @@ $(document).ready(function() {
         quantityStudents: 19,
         faculty: 'economy',
     }
+    console.log(group.name);
+
+
+    function outAudienceForGroup (listArray, itemCompare) {
+        listArray.forEach(item => {
+            if (item.quantity <= itemCompare.quantityStudents) {
+                return false;
+            } else if (item.faculty !== itemCompare.faculty) {
+                return false;
+            }
+            console.log(item);
+        })
+    }
 
     function outAudienceList(list) {
         console.log(list);
@@ -56,6 +69,7 @@ $(document).ready(function() {
     }
 
 
-    outAudienceList(audienceList);
-    outFaculty(audienceList);
+    // outAudienceList(audienceList);
+    // outFaculty(audienceList);
+    outAudienceForGroup(audienceList, group);
 });
