@@ -20,7 +20,7 @@ $(document).ready(function() {
             faculty: 'economy',
         },
         {
-            name: 'e',
+            name: 'k',
             quantity: 23,
             faculty: 'journalism',
         },
@@ -42,21 +42,17 @@ $(document).ready(function() {
     ];
     let group = {
         name: 'd',
-        quantityStudents: 19,
+        quantity: 19,
         faculty: 'economy',
     }
-    console.log(group.name);
-
 
     function outAudienceForGroup (listArray, itemCompare) {
-        listArray.forEach(item => {
-            if (item.quantity <= itemCompare.quantityStudents) {
-                return false;
-            } else if (item.faculty !== itemCompare.faculty) {
-                return false;
-            }
-            console.log(item);
+        let filtered = listArray.filter((item) => {
+                if (item.name == itemCompare.name && item.quantity >= itemCompare.quantity && item.faculty == itemCompare.faculty) {
+                    return true;
+                }
         })
+        console.log(filtered);
     }
 
     function outAudienceList(list) {
